@@ -1,0 +1,24 @@
+function updatedPlane = updatePlane(plane, updateStrat)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+arguments (Input)
+    plane
+    updateStrat
+end
+
+arguments (Output)
+    updatedPlane
+    
+end
+
+% Updating
+planeSize = size(plane);
+updatedPlane = zeros(planeSize);
+
+    for i = 1:planeSize(1)
+        for j = 1:planeSize(2)
+            updatedPlane(i, j) = update2DCell([i,j], plane, updateStrat);
+        end  
+    end
+
+end
